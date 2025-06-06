@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { toast } from 'react-toastify'
-import Icon from '@/components/atoms/Icon'
-import Heading from '@/components/atoms/Heading'
-import Paragraph from '@/components/atoms/Paragraph'
-import Button from '@/components/atoms/Button'
-import FormField from '@/components/molecules/FormField'
-import StepProgressBar from '@/components/molecules/StepProgressBar'
-import { questionService, clauseService } from '@/services'
-
+import Icon from '../atoms/Icon'
+import Heading from '../atoms/Heading'
+import Paragraph from '../atoms/Paragraph'
+import Button from '../atoms/Button'
+import FormField from '../molecules/FormField'
+import StepProgressBar from '../molecules/StepProgressBar'
+import { questionService, clauseService } from '../../services'
 const documentTypes = [
   {
     id: 'nda',
@@ -60,13 +59,28 @@ const documentTypes = [
   }
 ]
 
-const DocumentGeneratorForm = ({ selectedTemplate, setCurrentStep, handleNextStep, handlePrevStep, answers, handleAnswerChange, isGenerating, questions, setQuestions, setIsGenerating, setClauses, setGeneratedDocument, setShowPreview, resetGenerator }) => {
+const DocumentGeneratorForm = ({ 
+  selectedTemplate, 
+  currentStep, 
+  setCurrentStep, 
+  answers, 
+  handleAnswerChange, 
+  isGenerating, 
+  questions, 
+  setQuestions, 
+  setIsGenerating, 
+  setClauses, 
+  setGeneratedDocument, 
+  setShowPreview, 
+  resetGenerator 
+}) => {
 
   useEffect(() => {
     if (selectedTemplate) {
       loadQuestions(selectedTemplate.id)
+      setCurrentStep(1) // Reset to first step when template changes
     }
-  }, [selectedTemplate])
+  }, [selectedTemplate, setCurrentStep])
 
   const loadQuestions = async (templateId) => {
     try {
@@ -104,14 +118,21 @@ const DocumentGeneratorForm = ({ selectedTemplate, setCurrentStep, handleNextSte
     }
   }
 
-  const currentStepNum = questions.length > 0 ? Object.keys(answers).length + 1 : 1;
-  const totalStepsNum = questions.length > 0 ? questions.length : 1;
-  const currentQuestion = questions[currentStepNum - 1];
+  // Use the currentStep prop directly instead of calculating from answers
+  const currentStepNum = currentStep || 1
+  const totalStepsNum = questions.length > 0 ? questions.length : 1
+  const currentQuestion = questions[currentStepNum - 1]
 
   const handleNext = () => {
-    if (currentStepNum <= questions.length) {
+    // Validate current answer before proceeding
+    if (currentQuestion && !answers[currentQuestion.id]) {
+      toast.error('Please provide an answer before proceeding')
+      return
+    }
+
+    if (currentStepNum < questions.length) {
       setCurrentStep(currentStepNum + 1)
-    } else {
+    } else if (currentStepNum === questions.length) {
       generateDocument()
     }
   }
@@ -124,6 +145,13 @@ const DocumentGeneratorForm = ({ selectedTemplate, setCurrentStep, handleNextSte
     }
   }
 
+  // Handle Enter key press for advancing
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && currentQuestion && answers[currentQuestion.id]) {
+      e.preventDefault()
+      handleNext()
+    }
+  }
   return (
     <motion.div
       key="questionnaire"
@@ -152,14 +180,15 @@ const DocumentGeneratorForm = ({ selectedTemplate, setCurrentStep, handleNextSte
               Creating legally compliant clauses
             </Paragraph>
           </div>
-        ) : questions.length > 0 && currentQuestion ? (
+) : questions.length > 0 && currentQuestion ? (
           <div className="space-y-6">
-            <FormField
-              question={currentQuestion}
-              value={answers[currentQuestion.id]}
-              onChange={handleAnswerChange}
-            />
-
+            <div onKeyPress={handleKeyPress}>
+              <FormField
+                question={currentQuestion}
+                value={answers[currentQuestion.id]}
+                onChange={handleAnswerChange}
+              />
+            </div>
             <div className="flex justify-between pt-6">
               <Button
                 onClick={handleBack}
