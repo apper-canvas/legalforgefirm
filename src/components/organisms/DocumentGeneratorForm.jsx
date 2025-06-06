@@ -122,17 +122,34 @@ const DocumentGeneratorForm = ({
   const currentStepNum = currentStep || 1
   const totalStepsNum = questions.length > 0 ? questions.length : 1
   const currentQuestion = questions[currentStepNum - 1]
+const isCurrentAnswerValid = () => {
+    if (!currentQuestion) return false
+    const answer = answers[currentQuestion.id]
+    
+    if (!answer) return false
+    
+    // Check if answer is not just whitespace
+    if (typeof answer === 'string' && answer.trim().length === 0) {
+      return false
+    }
+    
+    return true
+  }
 
   const handleNext = () => {
+    console.log('Next button clicked', { currentQuestion, answers, currentStepNum })
+    
     // Validate current answer before proceeding
-    if (currentQuestion && !answers[currentQuestion.id]) {
+    if (!isCurrentAnswerValid()) {
       toast.error('Please provide an answer before proceeding')
       return
     }
 
     if (currentStepNum < questions.length) {
+      console.log('Moving to next step:', currentStepNum + 1)
       setCurrentStep(currentStepNum + 1)
     } else if (currentStepNum === questions.length) {
+      console.log('Generating document')
       generateDocument()
     }
   }
@@ -197,15 +214,14 @@ const DocumentGeneratorForm = ({
               >
                 Back
               </Button>
-
-              <Button
+<Button
                 onClick={handleNext}
-                disabled={!answers[currentQuestion.id]}
+                disabled={!isCurrentAnswerValid()}
                 className="bg-primary hover:bg-primary-dark text-white disabled:opacity-50 disabled:cursor-not-allowed"
                 iconName={currentStepNum === questions.length ? "Sparkles" : "ArrowRight"}
               >
                 {currentStepNum === questions.length ? 'Generate Document' : 'Next'}
-              </Button>
+</Button>
             </div>
           </div>
         ) : (
