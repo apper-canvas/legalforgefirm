@@ -1,0 +1,214 @@
+[
+  {
+    "id": "q1",
+    "templateId": "nda",
+    "text": "What is the name of the disclosing party?",
+    "type": "text",
+    "helpText": "This is the person or company that will be sharing confidential information",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q2",
+    "templateId": "nda",
+    "text": "What is the name of the receiving party?",
+    "type": "text",
+    "helpText": "This is the person or company that will receive the confidential information",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q3",
+    "templateId": "nda",
+    "text": "What type of information will be shared?",
+    "type": "select",
+    "helpText": "Select the category that best describes the confidential information",
+    "options": [
+      "Business plans and strategies",
+      "Technical specifications",
+      "Financial information",
+      "Customer data",
+      "Product designs",
+      "Other proprietary information"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q4",
+    "templateId": "nda",
+    "text": "How long should the confidentiality period last?",
+    "type": "select",
+    "helpText": "Choose the duration for which the information must remain confidential",
+    "options": [
+      "1 year",
+      "2 years",
+      "3 years",
+      "5 years",
+      "Indefinitely"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q5",
+    "templateId": "rental",
+    "text": "What is the full address of the rental property?",
+    "type": "textarea",
+    "helpText": "Include street address, city, state, and zip code",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q6",
+    "templateId": "rental",
+    "text": "What is the monthly rent amount?",
+    "type": "text",
+    "helpText": "Enter the amount in USD (e.g., 1500)",
+    "options": [],
+    "validation": {
+      "required": true,
+      "pattern": "^[0-9]+$"
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q7",
+    "templateId": "rental",
+    "text": "What is the lease term?",
+    "type": "select",
+    "helpText": "Choose the duration of the lease agreement",
+    "options": [
+      "6 months",
+      "1 year",
+      "18 months",
+      "2 years",
+      "Month-to-month"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q8",
+    "templateId": "rental",
+    "text": "What is the security deposit amount?",
+    "type": "text",
+    "helpText": "Typically equal to one month's rent",
+    "options": [],
+    "validation": {
+      "required": true,
+      "pattern": "^[0-9]+$"
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q9",
+    "templateId": "partnership",
+    "text": "What is the name of the partnership?",
+    "type": "text",
+    "helpText": "The official business name for the partnership",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 3
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q10",
+    "templateId": "partnership",
+    "text": "How many partners will be involved?",
+    "type": "select",
+    "helpText": "Select the total number of partners in the business",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "More than 5"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q11",
+    "templateId": "partnership",
+    "text": "How will profits and losses be shared?",
+    "type": "select",
+    "helpText": "Choose the method for distributing profits and losses",
+    "options": [
+      "Equally among all partners",
+      "Based on capital contribution",
+      "Based on work contribution",
+      "Custom percentage split"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q12",
+    "templateId": "employment",
+    "text": "What is the job title for this position?",
+    "type": "text",
+    "helpText": "The official job title as it will appear in company records",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q13",
+    "templateId": "employment",
+    "text": "What is the annual salary or hourly wage?",
+    "type": "text",
+    "helpText": "Enter the compensation amount (e.g., 75000 for salary or 25.00 for hourly)",
+    "options": [],
+    "validation": {
+      "required": true,
+      "pattern": "^[0-9.]+$"
+    },
+    "dependsOn": null
+  },
+  {
+    "id": "q14",
+    "templateId": "employment",
+    "text": "What type of employment is this?",
+    "type": "select",
+    "helpText": "Select the employment classification",
+    "options": [
+      "Full-time salary",
+      "Part-time salary",
+      "Hourly",
+      "Contract",
+      "Temporary"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null
+  }
+]

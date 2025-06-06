@@ -1,0 +1,141 @@
+[
+  {
+    "id": "1",
+    "type": "nda",
+    "title": "Standard Non-Disclosure Agreement",
+    "jurisdiction": "United States",
+    "riskLevel": "low",
+    "sections": [
+      "definition",
+      "obligations",
+      "exclusions",
+      "term",
+      "remedies",
+      "miscellaneous"
+    ],
+    "metadata": {
+      "version": "1.0",
+      "lastModified": "2024-01-15T10:30:00Z",
+      "authorId": "system",
+      "templateId": "nda-standard"
+    },
+    "createdAt": "2024-01-15T10:30:00Z",
+    "status": "active"
+  },
+  {
+    "id": "2",
+    "type": "rental",
+    "title": "Residential Lease Agreement",
+    "jurisdiction": "California",
+    "riskLevel": "medium",
+    "sections": [
+      "parties",
+      "property",
+      "term",
+      "rent",
+      "deposit",
+      "maintenance",
+      "termination"
+    ],
+    "metadata": {
+      "version": "2.1",
+      "lastModified": "2024-01-16T14:22:00Z",
+      "authorId": "system",
+      "templateId": "rental-residential"
+    },
+    "createdAt": "2024-01-16T14:22:00Z",
+    "status": "active"
+  },
+  {
+    "id": "3",
+    "type": "partnership",
+    "title": "Business Partnership Agreement",
+    "jurisdiction": "Delaware",
+    "riskLevel": "high",
+    "sections": [
+      "formation",
+      "capital",
+      "management",
+      "profits",
+      "dissolution",
+      "dispute"
+    ],
+    "metadata": {
+      "version": "1.5",
+      "lastModified": "2024-01-17T09:15:00Z",
+      "authorId": "system",
+      "templateId": "partnership-general"
+    },
+    "createdAt": "2024-01-17T09:15:00Z",
+    "status": "active"
+  },
+  {
+    "id": "4",
+    "type": "employment",
+    "title": "Employment Contract Template",
+    "jurisdiction": "New York",
+    "riskLevel": "medium",
+    "sections": [
+      "position",
+      "compensation",
+      "benefits",
+      "termination",
+      "confidentiality",
+      "intellectual_property"
+    ],
+    "metadata": {
+      "version": "1.8",
+      "lastModified": "2024-01-18T11:45:00Z",
+      "authorId": "system",
+      "templateId": "employment-standard"
+    },
+    "createdAt": "2024-01-18T11:45:00Z",
+    "status": "active"
+  },
+  {
+    "id": "5",
+    "type": "service",
+    "title": "Professional Services Agreement",
+    "jurisdiction": "Texas",
+    "riskLevel": "low",
+    "sections": [
+      "scope",
+      "deliverables",
+      "timeline",
+      "payment",
+      "liability",
+      "termination"
+    ],
+    "metadata": {
+      "version": "1.3",
+      "lastModified": "2024-01-19T16:30:00Z",
+      "authorId": "system",
+      "templateId": "service-professional"
+    },
+    "createdAt": "2024-01-19T16:30:00Z",
+    "status": "active"
+  },
+  {
+    "id": "6",
+    "type": "purchase",
+    "title": "Asset Purchase Agreement",
+    "jurisdiction": "Florida",
+    "riskLevel": "high",
+    "sections": [
+      "assets",
+      "purchase_price",
+      "closing",
+      "representations",
+      "warranties",
+      "indemnification"
+    ],
+    "metadata": {
+      "version": "2.0",
+      "lastModified": "2024-01-20T13:10:00Z",
+      "authorId": "system",
+      "templateId": "purchase-asset"
+    },
+    "createdAt": "2024-01-20T13:10:00Z",
+    "status": "active"
+  }
+]
