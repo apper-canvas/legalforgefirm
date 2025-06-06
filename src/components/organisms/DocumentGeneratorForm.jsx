@@ -118,29 +118,47 @@ const DocumentGeneratorForm = ({
     }
   }
 
-  // Use the currentStep prop directly instead of calculating from answers
+// Use the currentStep prop directly instead of calculating from answers
   const currentStepNum = currentStep || 1
   const totalStepsNum = questions.length > 0 ? questions.length : 1
   const currentQuestion = questions[currentStepNum - 1]
-const isCurrentAnswerValid = () => {
-    if (!currentQuestion) return false
-    const answer = answers[currentQuestion.id]
-    
-    if (!answer) return false
-    
-    // Check if answer is not just whitespace
-    if (typeof answer === 'string' && answer.trim().length === 0) {
+
+  const isCurrentAnswerValid = () => {
+    if (!currentQuestion) {
+      console.log('No current question available')
       return false
     }
     
+    const answer = answers[currentQuestion.id]
+    console.log('Checking answer validity:', { questionId: currentQuestion.id, answer })
+    
+    if (!answer) {
+      console.log('No answer provided')
+      return false
+    }
+    
+    // Check if answer is not just whitespace for string inputs
+    if (typeof answer === 'string' && answer.trim().length === 0) {
+      console.log('Answer is empty string')
+      return false
+    }
+    
+    console.log('Answer is valid')
     return true
   }
 
-  const handleNext = () => {
-    console.log('Next button clicked', { currentQuestion, answers, currentStepNum })
+  const handleNext = (e) => {
+    e?.preventDefault()
+    console.log('Next button clicked', { 
+      currentQuestion: currentQuestion?.id, 
+      answer: currentQuestion ? answers[currentQuestion.id] : 'no question',
+      currentStepNum,
+      totalQuestions: questions.length
+    })
     
     // Validate current answer before proceeding
     if (!isCurrentAnswerValid()) {
+      console.log('Answer validation failed')
       toast.error('Please provide an answer before proceeding')
       return
     }
@@ -221,7 +239,7 @@ const isCurrentAnswerValid = () => {
                 iconName={currentStepNum === questions.length ? "Sparkles" : "ArrowRight"}
               >
                 {currentStepNum === questions.length ? 'Generate Document' : 'Next'}
-</Button>
+              </Button>
             </div>
           </div>
         ) : (

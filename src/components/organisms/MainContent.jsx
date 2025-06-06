@@ -126,9 +126,10 @@ const MainContent = ({ documents, loading, error }) => {
             />
           )}
 
-          {selectedTemplate && !showPreview && (
+{selectedTemplate && !showPreview && (
             <DocumentGeneratorForm
               selectedTemplate={selectedTemplate}
+              currentStep={currentStep}
               setCurrentStep={setCurrentStep}
               answers={answers}
               handleAnswerChange={handleAnswerChange}
