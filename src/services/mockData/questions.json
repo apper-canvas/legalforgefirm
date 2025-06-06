@@ -2,33 +2,63 @@
   {
     "id": "q1",
     "templateId": "nda",
-    "text": "What is the name of the disclosing party?",
+    "text": "What is the full legal name of the disclosing party?",
     "type": "text",
-    "helpText": "This is the person or company that will be sharing confidential information",
+    "helpText": "Enter the complete legal name as it appears on official documents (individual or company)",
     "options": [],
     "validation": {
       "required": true,
       "minLength": 2
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "party_identification"
   },
   {
     "id": "q2",
     "templateId": "nda",
-    "text": "What is the name of the receiving party?",
+    "text": "What is the complete address of the disclosing party?",
+    "type": "textarea",
+    "helpText": "Include street address, city, state, zip code, and country",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q3",
+    "templateId": "nda",
+    "text": "What is the full legal name of the receiving party?",
     "type": "text",
-    "helpText": "This is the person or company that will receive the confidential information",
+    "helpText": "Enter the complete legal name as it appears on official documents",
     "options": [],
     "validation": {
       "required": true,
       "minLength": 2
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "party_identification"
   },
   {
-    "id": "q3",
+    "id": "q4",
     "templateId": "nda",
-    "text": "What type of information will be shared?",
+    "text": "What is the complete address of the receiving party?",
+    "type": "textarea",
+    "helpText": "Include street address, city, state, zip code, and country",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q5",
+    "templateId": "nda",
+    "text": "What type of confidential information will be shared?",
     "type": "select",
     "helpText": "Select the category that best describes the confidential information",
     "options": [
@@ -42,10 +72,11 @@
     "validation": {
       "required": true
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "terms"
   },
   {
-    "id": "q4",
+    "id": "q6",
     "templateId": "nda",
     "text": "How long should the confidentiality period last?",
     "type": "select",
@@ -60,23 +91,103 @@
     "validation": {
       "required": true
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "terms"
   },
   {
-    "id": "q5",
+    "id": "q7",
+    "templateId": "nda",
+    "text": "Which state or country's laws should govern this agreement?",
+    "type": "select",
+    "helpText": "Select the jurisdiction for legal interpretation and enforcement",
+    "options": [
+      "California, USA",
+      "New York, USA",
+      "Delaware, USA",
+      "Texas, USA",
+      "Florida, USA",
+      "United Kingdom",
+      "Canada",
+      "Other"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null,
+    "category": "legal"
+  },
+  {
+    "id": "q8",
     "templateId": "rental",
-    "text": "What is the full address of the rental property?",
+    "text": "What is the full legal name of the landlord/property owner?",
+    "type": "text",
+    "helpText": "Enter the complete legal name as it appears on property documents",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q9",
+    "templateId": "rental",
+    "text": "What is the landlord's complete mailing address?",
     "type": "textarea",
-    "helpText": "Include street address, city, state, and zip code",
+    "helpText": "Include street address, city, state, zip code for legal notices",
     "options": [],
     "validation": {
       "required": true,
       "minLength": 10
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "party_identification"
   },
   {
-    "id": "q6",
+    "id": "q10",
+    "templateId": "rental",
+    "text": "What is the full legal name of the tenant?",
+    "type": "text",
+    "helpText": "Enter the complete legal name as it appears on identification documents",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q11",
+    "templateId": "rental",
+    "text": "What is the tenant's current mailing address?",
+    "type": "textarea",
+    "helpText": "Address for correspondence and legal notices",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q12",
+    "templateId": "rental",
+    "text": "What is the complete address of the rental property?",
+    "type": "textarea",
+    "helpText": "Include street address, unit number, city, state, and zip code",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "property"
+  },
+  {
+    "id": "q13",
     "templateId": "rental",
     "text": "What is the monthly rent amount?",
     "type": "text",
@@ -86,12 +197,13 @@
       "required": true,
       "pattern": "^[0-9]+$"
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "terms"
   },
   {
-    "id": "q7",
+    "id": "q14",
     "templateId": "rental",
-    "text": "What is the lease term?",
+    "text": "What is the lease term duration?",
     "type": "select",
     "helpText": "Choose the duration of the lease agreement",
     "options": [
@@ -104,10 +216,11 @@
     "validation": {
       "required": true
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "terms"
   },
   {
-    "id": "q8",
+    "id": "q15",
     "templateId": "rental",
     "text": "What is the security deposit amount?",
     "type": "text",
@@ -117,25 +230,106 @@
       "required": true,
       "pattern": "^[0-9]+$"
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "terms"
   },
   {
-    "id": "q9",
+    "id": "q16",
+    "templateId": "rental",
+    "text": "Which state's rental laws should govern this lease?",
+    "type": "select",
+    "helpText": "Select the state where the property is located",
+    "options": [
+      "California",
+      "New York",
+      "Texas",
+      "Florida",
+      "Illinois",
+      "Pennsylvania",
+      "Ohio",
+      "Georgia",
+      "Other"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null,
+    "category": "legal"
+  },
+  {
+    "id": "q17",
     "templateId": "partnership",
-    "text": "What is the name of the partnership?",
+    "text": "What is the complete legal name of Partner 1?",
     "type": "text",
-    "helpText": "The official business name for the partnership",
+    "helpText": "Full legal name as it appears on official documents",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q18",
+    "templateId": "partnership",
+    "text": "What is Partner 1's complete address?",
+    "type": "textarea",
+    "helpText": "Include street address, city, state, zip code",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q19",
+    "templateId": "partnership",
+    "text": "What is the complete legal name of Partner 2?",
+    "type": "text",
+    "helpText": "Full legal name as it appears on official documents",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q20",
+    "templateId": "partnership",
+    "text": "What is Partner 2's complete address?",
+    "type": "textarea",
+    "helpText": "Include street address, city, state, zip code",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q21",
+    "templateId": "partnership",
+    "text": "What is the official name of the partnership?",
+    "type": "text",
+    "helpText": "The legal business name for the partnership entity",
     "options": [],
     "validation": {
       "required": true,
       "minLength": 3
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "business"
   },
   {
-    "id": "q10",
+    "id": "q22",
     "templateId": "partnership",
-    "text": "How many partners will be involved?",
+    "text": "How many total partners will be involved?",
     "type": "select",
     "helpText": "Select the total number of partners in the business",
     "options": [
@@ -148,14 +342,15 @@
     "validation": {
       "required": true
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "business"
   },
   {
-    "id": "q11",
+    "id": "q23",
     "templateId": "partnership",
-    "text": "How will profits and losses be shared?",
+    "text": "How will profits and losses be distributed?",
     "type": "select",
-    "helpText": "Choose the method for distributing profits and losses",
+    "helpText": "Choose the method for sharing profits and losses",
     "options": [
       "Equally among all partners",
       "Based on capital contribution",
@@ -165,40 +360,121 @@
     "validation": {
       "required": true
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "terms"
   },
   {
-    "id": "q12",
+    "id": "q24",
+    "templateId": "partnership",
+    "text": "Which state should govern this partnership agreement?",
+    "type": "select",
+    "helpText": "Select the jurisdiction for legal matters and business registration",
+    "options": [
+      "Delaware",
+      "California",
+      "New York",
+      "Texas",
+      "Nevada",
+      "Florida",
+      "Illinois",
+      "Other"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null,
+    "category": "legal"
+  },
+  {
+    "id": "q25",
     "templateId": "employment",
-    "text": "What is the job title for this position?",
+    "text": "What is the full legal name of the employer/company?",
     "type": "text",
-    "helpText": "The official job title as it will appear in company records",
+    "helpText": "Complete legal business name as registered",
     "options": [],
     "validation": {
       "required": true,
       "minLength": 2
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "party_identification"
   },
   {
-    "id": "q13",
+    "id": "q26",
+    "templateId": "employment",
+    "text": "What is the employer's complete business address?",
+    "type": "textarea",
+    "helpText": "Principal place of business including street, city, state, zip",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q27",
+    "templateId": "employment",
+    "text": "What is the employee's full legal name?",
+    "type": "text",
+    "helpText": "Complete legal name as it appears on official identification",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q28",
+    "templateId": "employment",
+    "text": "What is the employee's complete address?",
+    "type": "textarea",
+    "helpText": "Current residential address for employment records",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 10
+    },
+    "dependsOn": null,
+    "category": "party_identification"
+  },
+  {
+    "id": "q29",
+    "templateId": "employment",
+    "text": "What is the official job title for this position?",
+    "type": "text",
+    "helpText": "The job title as it will appear in company records",
+    "options": [],
+    "validation": {
+      "required": true,
+      "minLength": 2
+    },
+    "dependsOn": null,
+    "category": "position"
+  },
+  {
+    "id": "q30",
     "templateId": "employment",
     "text": "What is the annual salary or hourly wage?",
     "type": "text",
-    "helpText": "Enter the compensation amount (e.g., 75000 for salary or 25.00 for hourly)",
+    "helpText": "Enter compensation amount (e.g., 75000 for salary or 25.00 for hourly)",
     "options": [],
     "validation": {
       "required": true,
       "pattern": "^[0-9.]+$"
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "compensation"
   },
   {
-    "id": "q14",
+    "id": "q31",
     "templateId": "employment",
-    "text": "What type of employment is this?",
+    "text": "What type of employment classification is this?",
     "type": "select",
-    "helpText": "Select the employment classification",
+    "helpText": "Select the employment structure and payment basis",
     "options": [
       "Full-time salary",
       "Part-time salary",
@@ -209,6 +485,30 @@
     "validation": {
       "required": true
     },
-    "dependsOn": null
+    "dependsOn": null,
+    "category": "compensation"
+  },
+  {
+    "id": "q32",
+    "templateId": "employment",
+    "text": "Which state's employment laws should govern this contract?",
+    "type": "select",
+    "helpText": "Select the jurisdiction for employment law compliance",
+    "options": [
+      "California",
+      "New York",
+      "Texas",
+      "Florida",
+      "Illinois",
+      "Pennsylvania",
+      "Ohio",
+      "Georgia",
+      "Other"
+    ],
+    "validation": {
+      "required": true
+    },
+    "dependsOn": null,
+    "category": "legal"
   }
 ]

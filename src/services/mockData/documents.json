@@ -6,18 +6,51 @@
     "jurisdiction": "United States",
     "riskLevel": "low",
     "sections": [
-      "definition",
-      "obligations",
-      "exclusions",
-      "term",
-      "remedies",
-      "miscellaneous"
+      "parties",
+      "confidential_information",
+      "permitted_use",
+      "term_survival",
+      "governing_law",
+      "signatures",
+      "boilerplate"
     ],
+    "requiredElements": [
+      "party_identification",
+      "addresses",
+      "governing_law",
+      "signature_blocks",
+      "confidentiality_clauses",
+      "term_provisions",
+      "dispute_resolution"
+    ],
+    "complianceChecklist": {
+      "partiesIdentified": true,
+      "addressesIncluded": true,
+      "governingLawSpecified": true,
+      "signatureAreasProvided": true,
+      "confidentialityDefined": true,
+      "termSpecified": true,
+      "disputeResolutionIncluded": true,
+      "boilerplateLanguage": true
+    },
     "metadata": {
-      "version": "1.0",
-      "lastModified": "2024-01-15T10:30:00Z",
+      "version": "2.0",
+      "lastModified": "2024-01-22T10:30:00Z",
       "authorId": "system",
-      "templateId": "nda-standard"
+      "templateId": "nda-standard-enhanced",
+      "legalReviewStatus": "approved",
+      "revisionHistory": [
+        {
+          "version": "1.0",
+          "date": "2024-01-15T10:30:00Z",
+          "changes": "Initial template creation"
+        },
+        {
+          "version": "2.0",
+          "date": "2024-01-22T10:30:00Z",
+          "changes": "Added essential legal components, party identification, signature blocks, governing law clauses"
+        }
+      ]
     },
     "createdAt": "2024-01-15T10:30:00Z",
     "status": "active"
@@ -30,18 +63,57 @@
     "riskLevel": "medium",
     "sections": [
       "parties",
-      "property",
-      "term",
-      "rent",
-      "deposit",
-      "maintenance",
-      "termination"
+      "property_description",
+      "rent_payment",
+      "security_deposit",
+      "lease_term",
+      "governing_law",
+      "signatures",
+      "boilerplate"
     ],
+    "requiredElements": [
+      "landlord_identification",
+      "tenant_identification",
+      "property_address",
+      "rent_terms",
+      "security_deposit_terms",
+      "lease_duration",
+      "governing_law",
+      "signature_blocks",
+      "maintenance_obligations",
+      "termination_conditions"
+    ],
+    "complianceChecklist": {
+      "partiesIdentified": true,
+      "addressesIncluded": true,
+      "propertyDescribed": true,
+      "rentTermsSpecified": true,
+      "securityDepositHandled": true,
+      "leaseDurationDefined": true,
+      "governingLawSpecified": true,
+      "signatureAreasProvided": true,
+      "maintenanceObligations": true,
+      "terminationConditions": true,
+      "boilerplateLanguage": true
+    },
     "metadata": {
-      "version": "2.1",
-      "lastModified": "2024-01-16T14:22:00Z",
+      "version": "3.0",
+      "lastModified": "2024-01-22T14:22:00Z",
       "authorId": "system",
-      "templateId": "rental-residential"
+      "templateId": "rental-residential-enhanced",
+      "legalReviewStatus": "approved",
+      "revisionHistory": [
+        {
+          "version": "2.1",
+          "date": "2024-01-16T14:22:00Z",
+          "changes": "Updated rental clauses"
+        },
+        {
+          "version": "3.0",
+          "date": "2024-01-22T14:22:00Z",
+          "changes": "Added comprehensive party identification, signature blocks, governing law provisions, and legal compliance elements"
+        }
+      ]
     },
     "createdAt": "2024-01-16T14:22:00Z",
     "status": "active"
@@ -53,18 +125,59 @@
     "jurisdiction": "Delaware",
     "riskLevel": "high",
     "sections": [
-      "formation",
-      "capital",
-      "management",
-      "profits",
+      "parties",
+      "partnership_formation",
+      "profit_loss_distribution",
+      "management_authority",
       "dissolution",
-      "dispute"
+      "governing_law",
+      "signatures",
+      "boilerplate"
     ],
+    "requiredElements": [
+      "partner_identification",
+      "partnership_name",
+      "business_purpose",
+      "profit_sharing",
+      "management_structure",
+      "dissolution_terms",
+      "governing_law",
+      "signature_blocks",
+      "dispute_resolution",
+      "confidentiality_provisions"
+    ],
+    "complianceChecklist": {
+      "partiesIdentified": true,
+      "addressesIncluded": true,
+      "partnershipNameSpecified": true,
+      "businessPurposeDefined": true,
+      "profitSharingDefined": true,
+      "managementStructureClear": true,
+      "dissolutionTermsIncluded": true,
+      "governingLawSpecified": true,
+      "signatureAreasProvided": true,
+      "disputeResolutionIncluded": true,
+      "confidentialityProvisions": true,
+      "boilerplateLanguage": true
+    },
     "metadata": {
-      "version": "1.5",
-      "lastModified": "2024-01-17T09:15:00Z",
+      "version": "2.0",
+      "lastModified": "2024-01-22T09:15:00Z",
       "authorId": "system",
-      "templateId": "partnership-general"
+      "templateId": "partnership-general-enhanced",
+      "legalReviewStatus": "approved",
+      "revisionHistory": [
+        {
+          "version": "1.5",
+          "date": "2024-01-17T09:15:00Z",
+          "changes": "Updated management clauses"
+        },
+        {
+          "version": "2.0",
+          "date": "2024-01-22T09:15:00Z",
+          "changes": "Added comprehensive partner identification, signature requirements, governing law, dispute resolution, and legal compliance framework"
+        }
+      ]
     },
     "createdAt": "2024-01-17T09:15:00Z",
     "status": "active"
@@ -76,18 +189,57 @@
     "jurisdiction": "New York",
     "riskLevel": "medium",
     "sections": [
-      "position",
+      "parties",
+      "position_duties",
       "compensation",
-      "benefits",
-      "termination",
       "confidentiality",
-      "intellectual_property"
+      "termination",
+      "governing_law",
+      "signatures",
+      "boilerplate"
     ],
+    "requiredElements": [
+      "employer_identification",
+      "employee_identification",
+      "job_description",
+      "compensation_terms",
+      "confidentiality_obligations",
+      "termination_conditions",
+      "governing_law",
+      "signature_blocks",
+      "intellectual_property_clauses"
+    ],
+    "complianceChecklist": {
+      "partiesIdentified": true,
+      "addressesIncluded": true,
+      "jobDescriptionClear": true,
+      "compensationTermsSpecified": true,
+      "confidentialityObligations": true,
+      "terminationConditionsClear": true,
+      "governingLawSpecified": true,
+      "signatureAreasProvided": true,
+      "intellectualPropertyHandled": true,
+      "benefitsDescribed": false,
+      "boilerplateLanguage": true
+    },
     "metadata": {
-      "version": "1.8",
-      "lastModified": "2024-01-18T11:45:00Z",
+      "version": "2.5",
+      "lastModified": "2024-01-22T11:45:00Z",
       "authorId": "system",
-      "templateId": "employment-standard"
+      "templateId": "employment-standard-enhanced",
+      "legalReviewStatus": "approved",
+      "revisionHistory": [
+        {
+          "version": "1.8",
+          "date": "2024-01-18T11:45:00Z",
+          "changes": "Updated compensation clauses"
+        },
+        {
+          "version": "2.5",
+          "date": "2024-01-22T11:45:00Z",
+          "changes": "Added comprehensive party identification, signature blocks, governing law, confidentiality provisions, and legal compliance elements"
+        }
+      ]
     },
     "createdAt": "2024-01-18T11:45:00Z",
     "status": "active"
@@ -99,18 +251,58 @@
     "jurisdiction": "Texas",
     "riskLevel": "low",
     "sections": [
-      "scope",
+      "parties",
+      "scope_of_work",
       "deliverables",
-      "timeline",
-      "payment",
-      "liability",
-      "termination"
+      "payment_terms",
+      "liability_limitations",
+      "termination",
+      "governing_law",
+      "signatures",
+      "boilerplate"
     ],
+    "requiredElements": [
+      "service_provider_identification",
+      "client_identification",
+      "scope_definition",
+      "payment_terms",
+      "liability_provisions",
+      "termination_conditions",
+      "governing_law",
+      "signature_blocks",
+      "intellectual_property_clauses"
+    ],
+    "complianceChecklist": {
+      "partiesIdentified": true,
+      "addressesIncluded": true,
+      "scopeOfWorkDefined": true,
+      "paymentTermsSpecified": true,
+      "liabilityProvisionsIncluded": true,
+      "terminationConditionsClear": true,
+      "governingLawSpecified": true,
+      "signatureAreasProvided": true,
+      "intellectualPropertyHandled": true,
+      "confidentialityProvisions": false,
+      "boilerplateLanguage": true
+    },
     "metadata": {
-      "version": "1.3",
-      "lastModified": "2024-01-19T16:30:00Z",
+      "version": "2.0",
+      "lastModified": "2024-01-22T16:30:00Z",
       "authorId": "system",
-      "templateId": "service-professional"
+      "templateId": "service-professional-enhanced",
+      "legalReviewStatus": "approved",
+      "revisionHistory": [
+        {
+          "version": "1.3",
+          "date": "2024-01-19T16:30:00Z",
+          "changes": "Updated payment terms"
+        },
+        {
+          "version": "2.0",
+          "date": "2024-01-22T16:30:00Z",
+          "changes": "Added comprehensive party identification, signature requirements, governing law, and legal compliance framework"
+        }
+      ]
     },
     "createdAt": "2024-01-19T16:30:00Z",
     "status": "active"
@@ -122,18 +314,60 @@
     "jurisdiction": "Florida",
     "riskLevel": "high",
     "sections": [
-      "assets",
+      "parties",
+      "assets_description",
       "purchase_price",
-      "closing",
+      "closing_conditions",
+      "representations_warranties",
+      "indemnification",
+      "governing_law",
+      "signatures",
+      "boilerplate"
+    ],
+    "requiredElements": [
+      "buyer_identification",
+      "seller_identification",
+      "asset_description",
+      "purchase_price_terms",
+      "closing_conditions",
       "representations",
       "warranties",
-      "indemnification"
+      "indemnification_clauses",
+      "governing_law",
+      "signature_blocks"
     ],
+    "complianceChecklist": {
+      "partiesIdentified": true,
+      "addressesIncluded": true,
+      "assetsDescribed": true,
+      "purchasePriceSpecified": true,
+      "closingConditionsDefined": true,
+      "representationsIncluded": true,
+      "warrantiesProvided": true,
+      "indemnificationClauses": true,
+      "governingLawSpecified": true,
+      "signatureAreasProvided": true,
+      "disputeResolutionIncluded": true,
+      "boilerplateLanguage": true
+    },
     "metadata": {
-      "version": "2.0",
-      "lastModified": "2024-01-20T13:10:00Z",
+      "version": "3.0",
+      "lastModified": "2024-01-22T13:10:00Z",
       "authorId": "system",
-      "templateId": "purchase-asset"
+      "templateId": "purchase-asset-enhanced",
+      "legalReviewStatus": "approved",
+      "revisionHistory": [
+        {
+          "version": "2.0",
+          "date": "2024-01-20T13:10:00Z",
+          "changes": "Updated indemnification clauses"
+        },
+        {
+          "version": "3.0",
+          "date": "2024-01-22T13:10:00Z",
+          "changes": "Added comprehensive party identification, signature blocks, governing law, dispute resolution, and complete legal compliance framework"
+        }
+      ]
     },
     "createdAt": "2024-01-20T13:10:00Z",
     "status": "active"
